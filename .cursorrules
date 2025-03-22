@@ -1,0 +1,166 @@
+# Cursor Rules
+
+## Instructions
+
+- Record fixes and important lessons in the `Lessons` section for future reference.
+- Always prefer simple solutions over complex ones.
+- Avoid code duplication by checking the codebase for existing similar functionality.
+- Only make changes that are requested or clearly related to the current task.
+- When fixing bugs, try to maintain the existing implementation before introducing new patterns.
+- Keep the codebase clean, well-documented, and easy to understand.
+- Use consistent naming conventions and code formatting.
+- Maintain separation of concerns between components and modules.
+- Organize thoughts and plan implementation steps in the `Scratchpad` section.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update the Scratchpad after completing subtasks.
+- Reflect on progress and plan ahead after reaching milestones.
+- Never add stubbing or fake data patterns to production code.
+- Follow the DRY principle (Don't Repeat Yourself).
+- Handle errors gracefully with appropriate feedback to users.
+- Ensure proper data validation on both client and server sides.
+- Never overwrite .env files without explicit confirmation.
+
+## Lessons
+- When working with frontend frameworks, maintain clear separation between UI components and business logic
+- Implement proper error boundaries to prevent cascading failures
+- Always handle loading states for async operations to improve user experience
+- Use proper type checking for all function parameters and return values
+- Implement proper form validation with clear user feedback
+- Ensure responsive design works across all target devices and screen sizes
+- Set up proper environment variable management for different deployment environments
+- Implement automated testing for critical application paths
+- Use database transactions for operations that modify multiple records
+- Implement proper logging for debugging and monitoring
+- Use Tailwind CSS utility classes consistently for styling to maintain a cohesive design
+- Use React Context providers for global state management like cart and currency
+- Implement proper React Query configurations for data fetching
+- Leverage Shadcn UI components for consistent interface elements
+- Set up comprehensive routing with React Router for navigation
+- Use React Hook Form with Zod validation for form handling
+
+## Scratchpad
+
+#### Phase 1: Project Setup and Configuration
+- [X] Initialize project with chosen framework and TypeScript
+- [X] Set up code formatting and linting tools
+- [X] Configure CSS framework or styling solution
+- [X] Set up project structure (pages, components, services, utils)
+- [X] Configure environment variables
+- [X] Install and configure essential dependencies
+- [X] Set up version control
+- [X] Configure build process
+- [X] Create deployment pipeline
+
+#### Phase 2: Core Infrastructure
+- [ ] Set up database connection and ORM
+- [ ] Configure authentication system
+- [ ] Set up API routes and controllers
+- [ ] Implement error handling middleware
+- [ ] Create data models and validation schemas
+- [ ] Set up logging service
+- [ ] Implement authorization system
+- [ ] Configure CORS and security headers
+- [ ] Set up centralized state management (if needed)
+
+#### Phase 3: User Authentication and Management
+- [ ] Create user registration flow
+- [ ] Implement login system
+- [ ] Add password recovery functionality
+- [ ] Build user profile management
+- [ ] Implement role-based authorization
+- [ ] Create account settings page
+- [ ] Set up email verification
+- [ ] Implement session management
+- [ ] Add social login options (if needed)
+
+#### Phase 4: Core Application Features
+- [ ] Build main application layout
+- [ ] Implement navigation system
+- [ ] Create homepage with key information
+- [ ] Build primary user workflows
+- [ ] Implement CRUD operations for main entities
+- [ ] Add search functionality
+- [ ] Create listing and detail views
+- [ ] Implement filtering and sorting
+- [ ] Add pagination for list views
+
+#### Phase 5: Advanced Features
+- [ ] Implement notifications system
+- [ ] Add real-time updates (if needed)
+- [ ] Create analytics tracking
+- [ ] Build reporting features
+- [ ] Implement file upload functionality
+- [ ] Add export/import capabilities
+- [ ] Create advanced search features
+- [ ] Implement caching strategies
+- [ ] Add keyboard shortcuts
+
+#### Phase 6: UI Refinement
+- [ ] Implement responsive design adjustments
+- [ ] Add loading states and skeleton screens
+- [ ] Create error states and fallbacks
+- [ ] Implement empty states
+- [ ] Add micro-interactions and animations
+- [ ] Improve form feedback and validation UX
+- [ ] Optimize for accessibility
+- [ ] Create dark/light mode (if needed)
+- [ ] Add internationalization (if needed)
+
+#### Phase 7: Testing and Quality Assurance
+- [ ] Write unit tests for critical functionality
+- [ ] Create integration tests for main user flows
+- [ ] Implement end-to-end tests
+- [ ] Perform accessibility audits
+- [ ] Run performance testing
+- [ ] Conduct security audit
+- [ ] Test cross-browser compatibility
+- [ ] Optimize for mobile devices
+- [ ] Run usability testing
+
+#### Phase 8: Deployment and DevOps
+- [ ] Configure production environment
+- [ ] Set up continuous integration
+- [ ] Implement continuous deployment
+- [ ] Configure monitoring and alerting
+- [ ] Set up error tracking
+- [ ] Implement database backups
+- [ ] Create scaling strategy
+- [ ] Document deployment process
+- [ ] Set up staging environment
+
+#### Phase 9: Documentation and Training
+- [ ] Create technical documentation
+- [ ] Write user guides and help content
+- [ ] Document API endpoints
+- [ ] Create onboarding materials
+- [ ] Document database schema
+- [ ] Create system architecture diagrams
+- [ ] Document deployment and maintenance procedures
+- [ ] Write troubleshooting guides
+- [ ] Create contributor guidelines
+
+#### Phase 10: Launch and Post-Launch
+- [ ] Create launch checklist
+- [ ] Implement SEO optimizations
+- [ ] Set up analytics tracking
+- [ ] Prepare marketing materials
+- [ ] Plan for user feedback collection
+- [ ] Establish maintenance schedule
+- [ ] Prepare for feature iterations
+- [ ] Create roadmap for future enhancements
+- [ ] Set up user support system
+
+## Development Log
+
+**[Date: March 22, 2025]**
+- Analyzed existing project structure and identified completed Phase 1 tasks
+- Discovered project is using React with TypeScript and Vite build system
+- Found existing configuration for Tailwind CSS, ESLint, and project structure
+- Identified React Router setup with basic page routing
+- Found context providers for Cart and Currency state management
+- Noted React Query setup for data fetching
+- Created .env.example template file for environment variables
+- Created vercel.json configuration file for deployment with Vercel
+- Updated Cursor Rules file to reflect current project status 

@@ -1,0 +1,199 @@
+# Cursor Rules
+
+## Instructions
+
+- Record fixes for mistakes or corrections to avoid repetition in the `Lessons` section.
+- Always prefer simple solutions over complex ones.
+- Avoid duplication of code whenever possible, which means checking for other areas of the codebase that might already have similar code and functionality.
+- You are careful to only make changes that requested or you are confident are well understood and related to the change being requested.
+- When fixing an issue or bug, do not introduce a new pattern or technology without first exhausting all options for the existing implementation.
+- Keep the codebase clean and easy to understand.
+- Avoid making major changes to the patterns and architecture of how a feature works, after it has shown to work well, unless explicitly instructed to do so.
+- Organize thoughts and plan steps before starting a task in the `Scratchpad` section.
+- Clear old tasks if necessary.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update Scratchpad after completing subtasks.
+- Reflect and plan after milestones for better task management.
+- Mocking data is only needed for tests, never for the dev or production environment.
+- Never add stubbing or fake data patterns to code that affects the dev or production environment.
+- Always refer to Scratchpad before planning the next step.
+- Never overwrite my .env file without first asking and confirming with me.
+
+## Lessons
+- When working with shadcn/ui components, make sure to set up a proper ThemeProvider in a client component to avoid "useTheme() from the server" errors
+- In a Next.js App Router project, pay careful attention to client vs server component separation
+- Use a provider structure that wraps client-side functionality (theme, auth, toasts) to ensure proper hydration
+- When implementing NextAuth.js with OAuth providers, ensure you set both server-side variables (like GOOGLE_CLIENT_ID) and client-side variables (like NEXT_PUBLIC_GOOGLE_CLIENT_ID)
+- When working with OAuth redirects, make sure your Google Cloud Console redirect URIs include /api/auth/callback/[provider]
+- Remove unused ESLint directives to keep the codebase clean and avoid warnings during build
+- For better UX with auth providers, separate social login options from traditional login with a visual divider
+
+## Scratchpad
+
+#### Phase 1: Project Setup and Configuration
+- [X] Initialize Next.js 15 project with TypeScript
+- [X] Configure Tailwind CSS and Shadcn UI components
+- [X] Set up project structure (pages, components, lib, utils)
+- [X] Configure ESLint and Prettier
+- [X] Set up environment variables (.env)
+- [X] Install and configure dependencies (Lucide, Zod, Zustand, Recharts, Resend, Uploadthing)
+  - [X] Shadcn UI components
+  - [X] Lucide icons
+  - [X] Zod for validation
+  - [X] Zustand for state management
+  - [X] Recharts for analytics
+  - [X] Resend for emails
+  - [X] Uploadthing for file uploads
+  - [X] Prisma ORM
+  - [X] PostgreSQL database configuration
+  - [X] NextAuth.js beta for authentication
+- [X] Set up Pexels API integration for product images
+- [X] Ensure the project builds successfully
+
+#### Phase 2: Database and Authentication
+- [X] Set up PostgreSQL database
+- [X] Configure Prisma ORM
+  - [X] Define basic schema for users and authentication
+  - [X] Define schema for products, categories, orders, used/refurbished etc.
+  - [X] Set up migrations
+  - [X] Create database seed scripts
+- [X] Implement NextAuth.js (beta) authentication
+  - [X] Set up basic configuration
+  - [X] Implement credential provider with proper security
+  - [X] Implement Google OAuth provider
+  - [X] Set up login/register pages
+  - [X] Create responsive UI with social login options
+  - [X] Implement user roles (admin, customer)
+  - [X] Create authentication middleware
+  - [X] Handle authentication errors and redirects
+  - [X] Set up proper client/server component separation
+
+#### Phase 3: Core Ecommerce Features & UI/UX Implementation
+- [X] Global UI Components
+  - [X] Header/Navbar
+    - [X] Design responsive header with logo
+    - [X] Implement search bar functionality
+    - [X] Create navigation menu (mobile & desktop)
+    - [X] Add authentication state indicators
+    - [X] Integrate cart icon with item count
+  - [X] Footer
+    - [X] Design responsive footer
+    - [X] Add site links and information
+    - [X] Implement newsletter signup
+    - [X] Add social media links
+- [X] Homepage UI
+  - [X] Design hero section with featured products
+  - [X] Create banner carousel for promotions
+  - [X] Implement latest products section
+  - [X] Add categories showcase
+  - [X] Design responsive layout for all screen sizes
+- [X] Product Catalog UI
+  - [X] Create product cards component
+  - [X] Design sidebar with categories and filters
+    - [X] Implement price range filter
+    - [X] Add category filter component
+    - [X] Create attribute filters (size, color, etc.)
+  - [X] Build product grid/list view
+  - [X] Implement pagination
+  - [X] Add sorting options
+  - [X] Create search results view
+- [X] Product Detail UI
+  - [X] Design product detail layout
+  - [X] Implement image gallery/carousel
+  - [X] Create product information section
+  - [X] Add variant selection (size, color, etc.)
+  - [X] Build quantity selector
+  - [X] Implement "Add to Cart" functionality
+  - [X] Add related products section
+- [X] Shopping Cart UI/UX
+  - [X] Implement cart functionality with Zustand
+  - [X] Design cart sidebar/page
+  - [X] Create cart item component
+  - [X] Add quantity adjustment controls
+  - [X] Build cart summary section
+  - [X] Implement cart persistence
+- [X] Checkout Process
+  - [X] Design multi-step checkout form
+  - [X] Implement address management
+  - [X] Create payment method selection
+  - [X] Build order summary component
+  - [X] Add order confirmation page
+  - [X] Implement form validation with Zod
+- [X] UX Enhancements
+  - [X] Add loading states and skeleton loaders
+  - [X] Implement page transition animations
+  - [X] Create responsive designs for all screen sizes
+  - [X] Add micro-interactions
+  - [X] Implement toast notifications
+- [X] Order Management
+  - [X] Create order processing flow
+  - [X] Implement order history for customers
+  - [X] Design order detail view
+  - [X] Add order status tracking
+
+#### Phase 4: Admin Dashboard
+- [ ] Dashboard Overview
+  - [ ] Create admin layout with Shadcn UI
+  - [ ] Implement sales metrics and analytics with Recharts
+  - [ ] Add recent orders and inventory alerts
+- [ ] Product Management
+  - [ ] Create product CRUD operations
+  - [ ] Implement inventory management
+  - [ ] Add bulk operations (import/export)
+- [ ] Order Management
+  - [ ] Create order listing with filtering and search
+  - [ ] Implement order status updates
+  - [ ] Add refund processing
+- [ ] User Management
+  - [ ] Implement user CRUD operations
+  - [ ] Add role management
+- [ ] Content Management
+  - [ ] Create banner/promotion management
+  - [ ] Add category management
+
+#### Phase 5: Payment Integration
+- [ ] Implement payment method selection
+- [ ] Integrate payment methods:
+  - [ ] Manual Mobile Money
+  - [ ] Bank Transfer
+  - [ ] Cash on Delivery
+- [ ] Create payment confirmation flows
+- [ ] Implement invoice generation with Resend
+- [ ] Add payment receipt emails
+
+#### Phase 6: Media and File Management
+- [ ] Set up Uploadthing for file uploads
+- [ ] Implement product image management
+  - [ ] Image uploading and cropping
+  - [ ] Gallery management
+- [ ] Add bulk image import
+
+#### Phase 7: Advanced Features
+- [ ] Implement product reviews and ratings
+- [ ] Add wishlist functionality
+- [ ] Create coupon and discount system
+- [ ] Set up email marketing integration
+- [ ] Add product recommendations
+
+#### Phase 8: Testing and QA
+- [ ] Implement unit testing
+- [ ] Create integration tests
+- [ ] Perform accessibility testing
+- [ ] Conduct performance optimization
+- [ ] Complete security audit
+
+#### Phase 9: Deployment and CI/CD
+- [ ] Set up CI/CD pipeline
+- [ ] Configure production environment
+- [ ] Implement database backups
+- [ ] Set up monitoring and logging
+- [ ] Create deployment documentation
+
+#### Phase 10: Post-Launch
+- [ ] Implement SEO optimizations
+- [ ] Add analytics tracking
+- [ ] Create maintenance plan
+- [ ] Document user guides
+- [ ] Plan for future feature enhancements
